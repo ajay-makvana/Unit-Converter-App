@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="173dp"
+        tools:layout_editor_absoluteY="256dp">
+
+        <Button
+            android:id="@+id/length"
+            android:text="Length"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:layout_margin="16dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="length_convert"
+            tools:ignore="HardcodedText,InvalidId" />
+        <Button
+            android:id="@+id/currency"
+            android:text="@string/currency"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:layout_margin="16dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="currency_convert"
+            tools:ignore="InvalidId" />
+        <Button
+            android:id="@+id/temperature"
+            android:text="@string/temperature"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:layout_margin="16dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="temperature_convert"
+            tools:ignore="InvalidId" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textDirection="rtl"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Created by AJ" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="length">
+        <item>Meter</item>
+        <item>Centi Meter</item>
+        <item>Feet</item>
+        <item>Innches</item>
+    </string-array>
+</resources>

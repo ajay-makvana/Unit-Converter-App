@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">All In One Converter</string>
+    <string name="_123">123</string>
+    <string name="convert">Convert</string>
+    <string name="currency">Currency</string>
+    <string name="temperature">Temperature</string>
+    <string name="created_by">Created by AJ</string>
+</resources>
