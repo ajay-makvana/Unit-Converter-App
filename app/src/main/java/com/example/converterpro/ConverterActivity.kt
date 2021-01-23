@@ -135,69 +135,93 @@ class ConverterActivity : AppCompatActivity()
             if(text1==null)
             {
                 Toast.makeText(this, "Enter Value", Toast.LENGTH_SHORT).show()
+                textoutput?.text = ""
                 return@setOnClickListener
             }
 
             if (op == 1) {
-                if (pos1 == 0) //meter
-                {
-                    if (pos2 == 0) //meter
-                    {
-                        textoutput?.text = (text1).toString()
-                    } else if (pos2 == 1) //Centi Meter
-                    {
-                        textoutput?.text = (text1 * 100).toString()
-                    } else if (pos2 == 2)    //Inches
-                    {
-                        textoutput?.text = (text1 * 39.3701).toString()
-                    } else if (pos2 == 3)    //Feet
-                    {
-                        textoutput?.text = (text1 * 3.28084).toString()
+                when (pos1) {
+                    0 //meter
+                    -> {
+                        when (pos2) {
+                            0 //meter
+                            -> {
+                                textoutput?.text = (text1).toString()
+                            }
+                            1 //Centi Meter
+                            -> {
+                                textoutput?.text = (text1 * 100).toString()
+                            }
+                            2    //Inches
+                            -> {
+                                textoutput?.text = (text1 * 39.3701).toString()
+                            }
+                            3    //Feet
+                            -> {
+                                textoutput?.text = (text1 * 3.28084).toString()
+                            }
+                        }
                     }
-                } else if (pos1 == 1) //Centi Meter
-                {
-                    if (pos2 == 0) //meter
-                    {
-                        textoutput?.text = (text1 / 100).toString()
-                    } else if (pos2 == 1) //Centi Meter
-                    {
-                        textoutput?.text = (text1).toString()
-                    } else if (pos2 == 2)    //Inches
-                    {
-                        textoutput?.text = (text1 * 0.393701).toString()
-                    } else if (pos2 == 3)    //Feet
-                    {
-                        textoutput?.text = (text1 * 0.0328084).toString()
+                    1 //Centi Meter
+                    -> {
+                        when (pos2) {
+                            0 //meter
+                            -> {
+                                textoutput?.text = (text1 / 100).toString()
+                            }
+                            1 //Centi Meter
+                            -> {
+                                textoutput?.text = (text1).toString()
+                            }
+                            2    //Inches
+                            -> {
+                                textoutput?.text = (text1 * 0.393701).toString()
+                            }
+                            3    //Feet
+                            -> {
+                                textoutput?.text = (text1 * 0.0328084).toString()
+                            }
+                        }
                     }
-                } else if (pos1 == 2)    //Inches
-                {
-                    if (pos2 == 0) //meter
-                    {
-                        textoutput?.text = (text1 * 0.0254).toString()
-                    } else if (pos2 == 1) //Centi Meter
-                    {
-                        textoutput?.text = (text1 * 2.54).toString()
-                    } else if (pos2 == 2)    //Inches
-                    {
-                        textoutput?.text = (text1).toString()
-                    } else if (pos2 == 3)    //Feet
-                    {
-                        textoutput?.text = (text1 * 0.08333333).toString()
+                    2    //Inches
+                    -> {
+                        when (pos2) {
+                            0 //meter
+                            -> { textoutput?.text = (text1 * 0.0254).toString() }
+                            1 //Centi Meter
+                            -> {
+                                textoutput?.text = (text1 * 2.54).toString()
+                            }
+                            2    //Inches
+                            -> {
+                                textoutput?.text = (text1).toString()
+                            }
+                            3    //Feet
+                            -> {
+                                textoutput?.text = (text1 * 0.08333333).toString()
+                            }
+                        }
                     }
-                } else if (pos1 == 3)    //Feet
-                {
-                    if (pos2 == 0) //meter
-                    {
-                        textoutput?.text = (text1 * 0.3048).toString()
-                    } else if (pos2 == 1) //Centi Meter
-                    {
-                        textoutput?.text = (text1 * 30.48).toString()
-                    } else if (pos2 == 2)    //Inches
-                    {
-                        textoutput?.text = (text1 * 12).toString()
-                    } else if (pos2 == 3)    //Feet
-                    {
-                        textoutput?.text = (text1).toString()
+                    3    //Feet
+                    -> {
+                        when (pos2) {
+                            0 //meter
+                            -> {
+                                textoutput?.text = (text1 * 0.3048).toString()
+                            }
+                            1 //Centi Meter
+                            -> {
+                                textoutput?.text = (text1 * 30.48).toString()
+                            }
+                            2    //Inches
+                            -> {
+                                textoutput?.text = (text1 * 12).toString()
+                            }
+                            3    //Feet
+                            -> {
+                                textoutput?.text = (text1).toString()
+                            }
+                        }
                     }
                 }
             }
@@ -209,7 +233,8 @@ class ConverterActivity : AppCompatActivity()
                     if (pos2 == 0) //Rupee
                     {
                         textoutput?.text = (text1).toString()
-                    } else if (pos2 == 1)    //Dollar
+                    }
+                    else if (pos2 == 1)    //Dollar
                     {
                         textoutput?.text = (text1 / 70).toString()
                     }
