@@ -128,10 +128,15 @@ class ConverterActivity : AppCompatActivity()
 
         //converter button on click listener and selection of spinner1 and spinner2 output value in textoutput
         button?.setOnClickListener {
-            Toast.makeText(this, "Converted", Toast.LENGTH_SHORT).show()
 
             //get data of user entered
-            val text1 = textinput?.text.toString().toDouble()
+            val text1 = textinput?.text.toString().toDoubleOrNull()
+
+            if(text1==null)
+            {
+                Toast.makeText(this, "Enter Value", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
             if (op == 1) {
                 if (pos1 == 0) //meter
